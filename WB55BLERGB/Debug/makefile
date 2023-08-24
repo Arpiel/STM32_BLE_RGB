@@ -70,8 +70,8 @@ all: main-build
 main-build: WB55BLERGB.elf secondary-outputs
 
 # Tool invocations
-WB55BLERGB.elf WB55BLERGB.map: $(OBJS) $(USER_OBJS) C:\Users\lkbin\STM32CubeIDE\workspace_1.5.0\WB55BLERGB\STM32WB55RGVX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "WB55BLERGB.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\lkbin\STM32CubeIDE\workspace_1.5.0\WB55BLERGB\STM32WB55RGVX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WB55BLERGB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+WB55BLERGB.elf WB55BLERGB.map: $(OBJS) $(USER_OBJS) C:\Users\lkbin\STM32CubeIDE\workspace_1.5.0\STM32_BLE_RGB\WB55BLERGB\STM32WB55RGVX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "WB55BLERGB.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\lkbin\STM32CubeIDE\workspace_1.5.0\STM32_BLE_RGB\WB55BLERGB\STM32WB55RGVX_FLASH.ld" --specs=nosys.specs -Wl,-Map="WB55BLERGB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

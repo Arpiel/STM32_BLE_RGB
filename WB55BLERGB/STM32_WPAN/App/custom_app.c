@@ -131,6 +131,18 @@ void Custom_STM_App_Notification(Custom_STM_App_Notification_evt_t *pNotificatio
       /* USER CODE END CUSTOM_STM_LED_GREEN_WRITE_EVT */
       break;
 
+    case CUSTOM_STM_LED_POWER_READ_EVT:
+      /* USER CODE BEGIN CUSTOM_STM_LED_POWER_READ_EVT */
+
+      /* USER CODE END CUSTOM_STM_LED_POWER_READ_EVT */
+      break;
+
+    case CUSTOM_STM_LED_POWER_WRITE_EVT:
+      /* USER CODE BEGIN CUSTOM_STM_LED_POWER_WRITE_EVT */
+
+      /* USER CODE END CUSTOM_STM_LED_POWER_WRITE_EVT */
+      break;
+
     default:
       /* USER CODE BEGIN CUSTOM_STM_App_Notification_default */
 

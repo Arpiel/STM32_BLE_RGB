@@ -123,6 +123,20 @@ int main(void)
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+
+  TIM1->CCR1= *(__IO uint32_t *)0x08070000;
+  TIM1->CCR2= *(__IO uint32_t *)0x08070010;
+  TIM1->CCR3= *(__IO uint32_t *)0x08070020;
+
+  uint32_t* test;
+  static FLASH_EraseInitTypeDef Erase_struct;
+  Erase_struct.TypeErase=FLASH_TYPEERASE_PAGES;
+  Erase_struct.Page=100;
+  Erase_struct.NbPages=26;
+  HAL_FLASH_Unlock();
+  HAL_FLASHEx_Erase(&Erase_struct, &test);
+  HAL_FLASH_Lock();
+
   /* USER CODE END 2 */
 
   /* Init code for STM32_WPAN */

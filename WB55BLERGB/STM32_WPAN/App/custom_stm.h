@@ -38,6 +38,7 @@ typedef enum
   CUSTOM_STM_LED_RED,
   CUSTOM_STM_LED_BLUE,
   CUSTOM_STM_LED_GREEN,
+  CUSTOM_STM_LED_POWER,
 } Custom_STM_Char_Opcode_t;
 
 typedef enum
@@ -51,6 +52,9 @@ typedef enum
   /* LED_GREEN */
   CUSTOM_STM_LED_GREEN_READ_EVT,
   CUSTOM_STM_LED_GREEN_WRITE_EVT,
+  /* LED_POWER */
+  CUSTOM_STM_LED_POWER_READ_EVT,
+  CUSTOM_STM_LED_POWER_WRITE_EVT,
 
   CUSTOM_STM_BOOT_REQUEST_EVT
 } Custom_STM_Opcode_evt_t;
@@ -77,6 +81,7 @@ typedef struct
 extern uint8_t SizeLed_Red;
 extern uint8_t SizeLed_Blue;
 extern uint8_t SizeLed_Green;
+extern uint8_t SizeLed_Power;
 
 /* USER CODE BEGIN EC */
 

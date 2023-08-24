@@ -73,7 +73,9 @@ static void MX_RF_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+extern uint8_t RED;
+extern uint32_t BLUE;
+extern uint32_t GREEN;
 /* USER CODE END 0 */
 
 /**
@@ -127,6 +129,9 @@ int main(void)
   TIM1->CCR1= *(__IO uint32_t *)0x08070000;
   TIM1->CCR2= *(__IO uint32_t *)0x08070010;
   TIM1->CCR3= *(__IO uint32_t *)0x08070020;
+  RED = *(__IO uint32_t *)0x08070000;
+  BLUE = *(__IO uint32_t *)0x08070010;
+  GREEN = *(__IO uint32_t *)0x08070020;
 
   uint32_t* test;
   static FLASH_EraseInitTypeDef Erase_struct;
